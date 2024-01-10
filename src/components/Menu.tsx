@@ -56,6 +56,14 @@ const Menu = () => {
 							{item.title}
 						</Link>
 					))}
+					<Link
+						href="/cart"
+						onClick={() => {
+							setOpen(false);
+						}}
+					>
+						<Cart />
+					</Link>
 					{!user ? (
 						<Link
 							href="/login"
@@ -72,17 +80,9 @@ const Menu = () => {
 								setOpen(false);
 							}}
 						>
-							Orders
+							Logout
 						</Link>
 					)}
-					<Link
-						href="/cart"
-						onClick={() => {
-							setOpen(false);
-						}}
-					>
-						<Cart />
-					</Link>
 				</div>
 			)}
 		</div>
